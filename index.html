@@ -4,34 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>كراج AUTO | من نحن</title>
-<meta name="description" content="كراج AUTO — مركز متكامل لصيانة السيارات في الكويت: فحص كمبيوتر، ميكانيك، كهرباء، تكييف، سمكرة وصبغ، بضمان على العمل.">
+<meta name="description" content="كراج AUTO — صيانة وإصلاح السيارات في درعا، المنطقة الصناعية بجانب مديرية النقل: ميكانيك، كهرباء، برمجة، وتشخيص أعطال. متخصصون بالسيارات الأوروبية.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Cinzel:wght@600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
 <style>
 /* =========================================================
    ① الألوان والهوية — عدّل هنا لتغيير مظهر الموقع بالكامل
    ========================================================= */
 :root{
-  --bg:        #0B0B0C;   /* الخلفية الرئيسية */
-  --bg-2:      #121214;   /* خلفية الأقسام البديلة */
-  --card:      #17171A;   /* خلفية البطاقات */
-  --line:      rgba(201,162,75,.18); /* الحدود */
-  --gold:      #C9A24B;   /* الذهبي الأساسي */
-  --gold-2:    #E8CC85;   /* الذهبي الفاتح */
-  --gold-3:    #8C6A24;   /* الذهبي الداكن */
+  --bg:        #0A0A0A;   /* أسود فاخر — الخلفية الرئيسية */
+  --bg-2:      #0B1A3A;   /* كحلي داكن — خلفية الأقسام البديلة */
+  --card:      #0F1B33;   /* خلفية البطاقات */
+  --line:      rgba(212,175,55,.18); /* الحدود */
+  --gold:      #D4AF37;   /* ذهبي معدني */
+  --gold-2:    #EFD27A;   /* الذهبي الفاتح */
+  --gold-3:    #9A7A1E;   /* الذهبي الداكن */
+  --red:       #E10606;   /* أحمر فاخر — لون كلمة AUTO */
   --text:      #F3F0E8;   /* النص الأساسي */
-  --muted:     #A19D94;   /* النص الثانوي */
+  --muted:     #A7ABB8;   /* النص الثانوي */
   --radius:    14px;
   --maxw:      1180px;
   --metal: linear-gradient(135deg,var(--gold-3) 0%,var(--gold-2) 45%,var(--gold) 60%,var(--gold-3) 100%);
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{
-  font-family:'Tajawal',system-ui,sans-serif;
+  font-family:'Cairo',system-ui,sans-serif;
   background:var(--bg);color:var(--text);
   line-height:1.8;font-size:17px;overflow-x:hidden;
 }
@@ -58,8 +60,8 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
   padding:14px 28px;border-radius:999px;font-weight:700;font-size:1rem;
   transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:0;font-family:inherit;
 }
-.btn-gold{background:var(--metal);color:#1a1405;box-shadow:0 10px 30px -10px rgba(201,162,75,.6)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(201,162,75,.8)}
+.btn-gold{background:var(--metal);color:#1a1405;box-shadow:0 10px 30px -10px rgba(212,175,55,.6)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(212,175,55,.8)}
 .btn-ghost{border:1px solid var(--line);color:var(--text);background:transparent}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold-2)}
 .btn svg{width:20px;height:20px}
@@ -68,10 +70,10 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:32px;transition:transform .35s,border-color .35s,box-shadow .35s;position:relative;overflow:hidden;
 }
-.card:hover{transform:translateY(-6px);border-color:rgba(201,162,75,.5);box-shadow:0 24px 50px -30px rgba(201,162,75,.45)}
+.card:hover{transform:translateY(-6px);border-color:rgba(212,175,55,.5);box-shadow:0 24px 50px -30px rgba(212,175,55,.45)}
 .icon{
   width:58px;height:58px;border-radius:14px;display:grid;place-items:center;margin-bottom:20px;
-  background:rgba(201,162,75,.08);border:1px solid var(--line);color:var(--gold-2)
+  background:rgba(212,175,55,.08);border:1px solid var(--line);color:var(--gold-2)
 }
 .icon svg{width:28px;height:28px}
 
@@ -83,10 +85,8 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
 .nav.scrolled{background:rgba(11,11,12,.88);backdrop-filter:blur(14px);border-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem}
-.logo .mark{
-  font-family:'Cinzel',serif;font-size:1.45rem;letter-spacing:3px;
-  background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent
-}
+.logo .mark{font-family:'Montserrat',sans-serif;font-size:1.4rem;letter-spacing:2px;color:var(--red)}
+.red-text{color:var(--red)}
 .logo .sep{width:1px;height:22px;background:var(--line)}
 .menu{display:flex;gap:30px;list-style:none;font-weight:500}
 .menu a{color:var(--muted);transition:color .2s}
@@ -99,14 +99,15 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
 .hero{
   min-height:88vh;display:flex;align-items:center;padding:140px 0 90px;
   background:
-    radial-gradient(900px 500px at 15% 20%,rgba(201,162,75,.16),transparent 60%),
-    radial-gradient(700px 400px at 90% 90%,rgba(201,162,75,.08),transparent 60%),
+    radial-gradient(900px 500px at 15% 20%,rgba(212,175,55,.16),transparent 60%),
+    radial-gradient(700px 400px at 90% 90%,rgba(225,6,6,.12),transparent 60%),
+    radial-gradient(900px 600px at 70% 10%,rgba(11,26,58,.9),transparent 70%),
     var(--bg);
   overflow:hidden;
 }
 .hero::after{ /* خطوط زخرفية */
   content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
-  background-image:linear-gradient(rgba(201,162,75,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,75,.06) 1px,transparent 1px);
+  background-image:linear-gradient(rgba(212,175,55,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.06) 1px,transparent 1px);
   background-size:64px 64px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
 }
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:2}
@@ -116,7 +117,7 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
 .hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
 .hero-visual{
   aspect-ratio:1/1;border-radius:50%;position:relative;
-  background:radial-gradient(circle at 50% 50%,rgba(201,162,75,.15),transparent 62%);
+  background:radial-gradient(circle at 50% 50%,rgba(212,175,55,.15),transparent 62%);
   display:grid;place-items:center;
 }
 .hero-visual .ring{position:absolute;inset:6%;border:1px solid var(--line);border-radius:50%;animation:spin 40s linear infinite}
@@ -125,7 +126,7 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
 .hero-visual .badge{
   text-align:center;position:relative;z-index:2;
 }
-.hero-visual .badge .big{font-family:'Cinzel',serif;font-size:clamp(3.2rem,8vw,5.6rem);letter-spacing:8px;line-height:1}
+.hero-visual .badge .big{font-family:'Montserrat',sans-serif;font-size:clamp(3.2rem,8vw,5.6rem);letter-spacing:8px;line-height:1}
 .hero-visual .badge small{display:block;color:var(--muted);letter-spacing:4px;margin-top:10px;font-size:.85rem}
 @keyframes spin{to{transform:rotate(360deg)}}
 
@@ -135,7 +136,7 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
   position:relative;border-radius:22px;aspect-ratio:4/5;overflow:hidden;
   border:1px solid var(--line);
   background:
-    linear-gradient(160deg,rgba(201,162,75,.18),transparent 40%),
+    linear-gradient(160deg,rgba(212,175,55,.18),transparent 40%),
     linear-gradient(0deg,#0d0d0f,#1b1b1f);
 }
 .story-media img{width:100%;height:100%;object-fit:cover}
@@ -154,7 +155,7 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
 .checks li::before{content:"";flex:0 0 20px;height:20px;margin-top:5px;border-radius:50%;
   background:var(--metal);mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>') center/14px no-repeat,linear-gradient(#000,#000);
   -webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>') center/14px no-repeat;
-  background-color:rgba(201,162,75,.15);
+  background-color:rgba(212,175,55,.15);
 }
 
 /* ---------- الأرقام ---------- */
@@ -170,7 +171,7 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px}
 .card h3{font-size:1.25rem;margin-bottom:10px}
 .card p{color:var(--muted);font-size:.98rem}
-.card .num{position:absolute;top:18px;inset-inline-end:22px;font-family:'Cinzel',serif;font-size:2.6rem;color:rgba(201,162,75,.12)}
+.card .num{position:absolute;top:18px;inset-inline-end:22px;font-family:'Montserrat',sans-serif;font-size:2.6rem;color:rgba(212,175,55,.12)}
 
 /* ---------- رؤية/رسالة ---------- */
 .vm .card{padding:40px}
@@ -182,7 +183,7 @@ h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
 .step{text-align:center;position:relative}
 .step .dot{
   width:62px;height:62px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;
-  background:var(--bg);border:1px solid var(--gold);font-family:'Cinzel',serif;font-size:1.2rem;color:var(--gold-2);position:relative;z-index:1
+  background:var(--bg);border:1px solid var(--gold);font-family:'Montserrat',sans-serif;font-size:1.2rem;color:var(--gold-2);position:relative;z-index:1
 }
 .step h3{font-size:1.08rem;margin-bottom:6px}
 .step p{color:var(--muted);font-size:.92rem}
@@ -281,81 +282,80 @@ footer p{color:var(--muted);font-size:.9rem}
      ========================================================= -->
 <script>
 const CONFIG = {
+  // المرجع المعتمد: docs/kraj-auto-reference.md
   name:      "كراج",
   brand:     "AUTO",
-  tagline:   "عناية تليق بسيارتك",
+  tagline:   "متخصصون بالسيارات الأوروبية",
 
   // التواصل
-  phone:     "+965 0000 0000",       // [رقم الهاتف]
-  whatsapp:  "96500000000",          // [رقم واتساب بدون + أو مسافات]
-  email:     "info@example.com",     // [البريد الإلكتروني]
-  address:   "الكويت – الشويخ الصناعية، قطعة ـ ، شارع ـ", // [العنوان]
-  hours:     "السبت – الخميس: 8:00 ص – 10:00 م",
-  hoursOff:  "الجمعة: مغلق",
-  mapEmbed:  "",                     // [رابط تضمين خرائط جوجل — اتركه فارغًا لإخفاء الخريطة]
-  instagram: "",                     // [رابط إنستغرام — فارغ = مخفي]
+  phone:     "098 363 7770",          // الرقم المعتمد
+  phoneIntl: "+963983637770",         // نفس الرقم بالصيغة الدولية لروابط الاتصال
+  whatsapp:  "963983637770",          // [تأكّد أن الرقم مفعّل على واتساب]
+  email:     "",                      // [غير محدد — فارغ = مخفي]
+  address:   "درعا – المنطقة الصناعية، بجانب مديرية النقل",
+  hours:     "",                      // [ساعات العمل غير محسومة — فارغ = مخفي]
+  hoursOff:  "",
+  lat:       32.6226416,
+  lng:       36.1215116,
+  instagram: "",                      // [رابط إنستغرام — فارغ = مخفي]
+  facebook:  "",                      // [رابط فيسبوك — فارغ = مخفي]
   tiktok:    "",
-  x:         "",
 
   // من نحن
-  foundedYear: 2015,                 // [سنة التأسيس]
+  foundedYear: "",                    // [سنة التأسيس — فارغ = مخفي]
   story: [
-    "بدأ كراج AUTO بفكرة واضحة: أن يحصل صاحب السيارة في الكويت على خدمة بمستوى الوكالة، بشفافية في السعر وسرعة في التسليم، دون تعقيد أو مفاجآت في الفاتورة.",
-    "اليوم نعمل بفريق من الفنيين المتخصصين وأجهزة تشخيص حديثة تغطي أغلب الماركات الأوروبية والآسيوية والأمريكية، ونلتزم بإبلاغ العميل بالتشخيص والتكلفة قبل البدء بأي عمل."
+    "كراج AUTO ورشة لصيانة وإصلاح السيارات في المنطقة الصناعية بدرعا، بجانب مديرية النقل. نجمع تحت سقف واحد ميكانيك السيارات وكهرباءها وبرمجتها وتشخيص أعطالها، مع اهتمام خاص بالسيارات الأوروبية.",
+    "نبدأ كل عمل بالتشخيص لتحديد سبب العطل بدقة قبل الإصلاح، لأن الإصلاح الصحيح يبدأ من فهم المشكلة لا من تبديل القطع."
   ],
   highlights: [
-    "أجهزة فحص كمبيوتر حديثة",
-    "قطع غيار أصلية وبديلة معتمدة",
-    "عرض سعر مكتوب قبل البدء",
-    "ضمان على العمل وقطع الغيار",
-    "تحديث العميل بالصور أثناء الإصلاح",
-    "التزام بموعد التسليم"
+    "ميكانيك السيارات",
+    "كهرباء السيارات",
+    "برمجة السيارات",
+    "تشخيص وفحص الأعطال",
+    "اهتمام بالسيارات الأوروبية",
+    "موقع واضح بجانب مديرية النقل"
   ],
 
-  // الأرقام — اتركها صفرًا لإخفاء الشريط بالكامل
-  stats: [
-    { value: 10,    suffix: "+", label: "سنوات خبرة" },
-    { value: 15000, suffix: "+", label: "سيارة تمت خدمتها" },
-    { value: 25,    suffix: "",  label: "فنيًا متخصصًا" },
-    { value: 6,     suffix: " أشهر", label: "ضمان على العمل" }
-  ],
+  // الأرقام — غير متوفرة حاليًا. أضفها فقط عند توفر بيانات حقيقية، مثال:
+  // { value: 10, suffix: "+", label: "سنوات خبرة" }
+  stats: [],
 
-  vision:  "أن نكون الخيار الأول لأصحاب السيارات في الكويت لكل ما يخص الصيانة والإصلاح، بمعايير خدمة تضاهي الوكالات.",
-  mission: "تقديم صيانة دقيقة وشفافة بأيدي فنيين مؤهلين، باستخدام أحدث أدوات التشخيص، مع احترام وقت العميل وميزانيته.",
+  vision:  "أن يكون كراج AUTO الوجهة الموثوقة لأصحاب السيارات في درعا، وخاصة السيارات الأوروبية.",
+  mission: "تشخيص دقيق وإصلاح متقن للأعطال الميكانيكية والكهربائية والإلكترونية، بأسلوب احترافي يحترم وقت العميل.",
   values: [
-    { t: "الشفافية", d: "تشخيص واضح وسعر معلن قبل أي عمل." },
-    { t: "الإتقان",  d: "نعمل وفق مواصفات الشركة المصنّعة." },
-    { t: "الالتزام", d: "موعد التسليم وعد لا يُخلف." },
-    { t: "الأمان",   d: "سلامتك على الطريق أولويتنا." }
+    { t: "الدقة",      d: "التشخيص أولًا، ثم الإصلاح." },
+    { t: "الإتقان",    d: "عمل احترافي في كل تفصيل." },
+    { t: "الوضوح",     d: "شرح العطل للعميل قبل البدء." },
+    { t: "الأمان",     d: "سلامتك على الطريق أولويتنا." }
   ],
 
+  // الخدمات المعتمدة الأربع فقط
   services: [
-    { icon: "scan",   t: "فحص كمبيوتر شامل", d: "تشخيص دقيق للأعطال بأجهزة معتمدة مع تقرير مفصّل." },
-    { icon: "engine", t: "ميكانيك عام",      d: "محركات، جير، عفشة، فرامل، وصيانة شاملة لجميع الأنظمة." },
-    { icon: "bolt",   t: "كهرباء السيارات",  d: "بطاريات، دينامو، سلف، وأنظمة الإضاءة والحساسات." },
-    { icon: "snow",   t: "تكييف وتبريد",     d: "تعبئة فريون، كشف تسريب، وصيانة كمبروسر وراديتر." },
-    { icon: "oil",    t: "صيانة دورية وزيوت", d: "تغيير زيوت وفلاتر وفق جدول الشركة المصنّعة." },
-    { icon: "paint",  t: "سمكرة وصبغ",       d: "إصلاح الصدمات والصبغ بغرفة مجهزة ومطابقة اللون." }
+    { icon: "engine", t: "ميكانيك السيارات",   d: "صيانة وإصلاح المحرك وأنظمة السيارة الميكانيكية." },
+    { icon: "bolt",   t: "كهرباء السيارات",    d: "فحص وإصلاح الدارات والأنظمة الكهربائية." },
+    { icon: "chip",   t: "برمجة السيارات",     d: "برمجة الأنظمة والوحدات الإلكترونية." },
+    { icon: "scan",   t: "تشخيص وفحص الأعطال", d: "تحديد سبب العطل بأجهزة الفحص قبل الإصلاح." }
   ],
 
   why: [
-    { icon: "shield", t: "ضمان مكتوب",       d: "ضمان على العمل وقطع الغيار المركّبة." },
-    { icon: "tag",    t: "سعر قبل البدء",    d: "لا نبدأ بأي إصلاح قبل موافقتك على التكلفة." },
-    { icon: "clock",  t: "تسليم بالموعد",    d: "نحدد وقت التسليم مسبقًا ونلتزم به." },
-    { icon: "user",   t: "فنيون معتمدون",    d: "فريق مدرّب ومتخصص حسب نوع السيارة." }
+    { icon: "car",    t: "خبرة بالسيارات الأوروبية", d: "مرسيدس، BMW، بورش، رنج روفر." },
+    { icon: "scan",   t: "التشخيص أولًا",           d: "نحدد العطل بدقة قبل أي إصلاح." },
+    { icon: "chip",   t: "ميكانيك وإلكترونيات",     d: "الخدمات الأربع تحت سقف واحد." },
+    { icon: "pin",    t: "موقع سهل الوصول",         d: "المنطقة الصناعية، بجانب مديرية النقل." }
   ],
 
   steps: [
-    { t: "الحجز",      d: "عبر واتساب أو الاتصال" },
-    { t: "الفحص",      d: "تشخيص كمبيوتر وفحص فني" },
-    { t: "عرض السعر",  d: "تكلفة واضحة لموافقتك" },
-    { t: "الإصلاح",    d: "تنفيذ مع تحديثات مصوّرة" },
-    { t: "التسليم",    d: "اختبار قيادة وضمان" }
+    { t: "التواصل",  d: "اتصال أو واتساب" },
+    { t: "التشخيص",  d: "فحص السيارة وتحديد العطل" },
+    { t: "الاتفاق",  d: "شرح العطل والتكلفة" },
+    { t: "الإصلاح",  d: "تنفيذ العمل باحترافية" },
+    { t: "التسليم",  d: "فحص نهائي قبل التسليم" }
   ],
 
-  brands: ["تويوتا","لكزس","نيسان","هوندا","هيونداي","كيا","مرسيدس","بي إم دبليو","أودي","فولكسفاغن","لاند روفر","شيفروليه","جي إم سي","فورد","جيب"],
+  brands: ["Mercedes-Benz","BMW","Porsche","Range Rover"],
 
-  // الآراء — احذف العناصر أو اترك القائمة فارغة [] لإخفاء القسم. لا تضع تقييمات غير حقيقية.
+  // الآراء — أضف تقييمات حقيقية فقط. فارغ = القسم مخفي.
+  // مثال: { name: "أحمد", car: "BMW X5", text: "...", stars: 5 }
   testimonials: []
 };
 </script>
@@ -386,8 +386,8 @@ const CONFIG = {
     <div class="reveal">
       <div class="crumbs"><a href="#top">الرئيسية</a> / من نحن</div>
       <span class="eyebrow">من نحن</span>
-      <h1>خبرة تُتقن التفاصيل،<br><span class="gold-text" data-bind="tagline"></span></h1>
-      <p class="lead">مركز متكامل لصيانة وإصلاح السيارات في الكويت، يجمع بين الخبرة الفنية وأحدث أجهزة التشخيص وخدمة عملاء بمستوى راقٍ.</p>
+      <h1>دقة في التشخيص، إتقان في الإصلاح<br><span class="gold-text" data-bind="tagline"></span></h1>
+      <p class="lead">صيانة وإصلاح السيارات في المنطقة الصناعية بدرعا: ميكانيك، كهرباء، برمجة، وتشخيص أعطال — تحت سقف واحد.</p>
       <div class="actions">
         <a class="btn btn-gold" data-wa href="#">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
@@ -398,7 +398,7 @@ const CONFIG = {
     </div>
     <div class="hero-visual reveal" aria-hidden="true">
       <div class="ring"></div><div class="ring"></div>
-      <div class="badge"><div class="big gold-text" data-bind="brand"></div><small>CAR CARE · KUWAIT</small></div>
+      <div class="badge"><div class="big red-text" data-bind="brand"></div><small>درعا – سوريا</small></div>
     </div>
   </div>
 </section>
@@ -411,11 +411,11 @@ const CONFIG = {
       <div class="ph">
         <svg viewBox="0 0 200 90" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 62h12c0-9 7-16 16-16s16 7 16 16h82c0-9 7-16 16-16s16 7 16 16h6V48l-14-6-26-20H64L40 40 14 44l-4 6z"/><circle cx="38" cy="62" r="10"/><circle cx="152" cy="62" r="10"/><path d="M70 26h40v16H54zM116 26h20l18 16h-38z"/></svg>
       </div>
-      <div class="since"><b class="gold-text" data-bind="foundedYear"></b><span>عام التأسيس</span></div>
+      <div class="since" id="since" hidden><b class="gold-text" data-bind="foundedYear"></b><span>عام التأسيس</span></div>
     </div>
     <div class="reveal">
       <span class="eyebrow">قصتنا</span>
-      <h2>أكثر من ورشة… <span class="gold-text">شريكك في العناية بسيارتك</span></h2>
+      <h2>ورشة احترافية <span class="gold-text">لسيارتك الأوروبية</span></h2>
       <div id="story"></div>
       <ul class="checks" id="highlights"></ul>
     </div>
@@ -456,9 +456,9 @@ const CONFIG = {
     <div class="center reveal">
       <span class="eyebrow">خدماتنا</span>
       <h2>خدمات متكاملة <span class="gold-text">تحت سقف واحد</span></h2>
-      <p class="lead">من الفحص الأولي حتى التسليم، نغطي كل ما تحتاجه سيارتك بمعايير احترافية.</p>
+      <p class="lead">أربع خدمات أساسية تغطي أعطال السيارة الميكانيكية والكهربائية والإلكترونية.</p>
     </div>
-    <div class="grid-3" id="services-grid"></div>
+    <div class="grid-4" id="services-grid"></div>
   </div>
 </section>
 
@@ -467,7 +467,7 @@ const CONFIG = {
   <div class="wrap">
     <div class="center reveal">
       <span class="eyebrow">لماذا نحن</span>
-      <h2>ثقة تُبنى <span class="gold-text">بالتفاصيل</span></h2>
+      <h2>ما يميّز <span class="gold-text">كراج</span> <span class="red-text" style="font-family:Montserrat,sans-serif">AUTO</span></h2>
     </div>
     <div class="grid-4" id="why-grid"></div>
 
@@ -484,7 +484,7 @@ const CONFIG = {
   <div class="wrap center">
     <div class="reveal">
       <span class="eyebrow">الماركات</span>
-      <h2>نخدم <span class="gold-text">أغلب الماركات</span></h2>
+      <h2>متخصصون <span class="gold-text">بالسيارات الأوروبية</span></h2>
     </div>
     <div class="brands reveal" id="brands"></div>
   </div>
@@ -507,16 +507,16 @@ const CONFIG = {
     <div class="center reveal">
       <span class="eyebrow">تواصل معنا</span>
       <h2>احجز موعدك <span class="gold-text">الآن</span></h2>
-      <p class="lead">املأ البيانات وسيتم تحويلك إلى واتساب برسالة جاهزة.</p>
+      <p class="lead">املأ البيانات وسيتم تحويلك إلى واتساب برسالة جاهزة، أو اتصل بنا مباشرة.</p>
     </div>
     <div class="contact" style="margin-top:50px">
       <form class="card form reveal" id="bookForm">
         <div class="row">
           <div><label for="f-name">الاسم</label><input id="f-name" required placeholder="الاسم الكامل"></div>
-          <div><label for="f-phone">رقم الهاتف</label><input id="f-phone" type="tel" required placeholder="xxxx xxxx" inputmode="tel"></div>
+          <div><label for="f-phone">رقم الهاتف</label><input id="f-phone" type="tel" required placeholder="09xx xxx xxx" inputmode="tel"></div>
         </div>
         <div class="row">
-          <div><label for="f-car">نوع السيارة وموديلها</label><input id="f-car" required placeholder="مثال: لكزس ES 2021"></div>
+          <div><label for="f-car">نوع السيارة وموديلها</label><input id="f-car" required placeholder="مثال: مرسيدس C200 2018"></div>
           <div><label for="f-service">الخدمة المطلوبة</label><select id="f-service"></select></div>
         </div>
         <div><label for="f-date">الموعد المفضّل</label><input id="f-date" type="date"></div>
@@ -529,10 +529,11 @@ const CONFIG = {
         <ul class="info-list">
           <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>العنوان</small><b data-bind="address"></b></div></li>
           <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span><div><small>الهاتف</small><a data-tel href="#"><b data-bind="phone" dir="ltr"></b></a></div></li>
-          <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>ساعات العمل</small><b data-bind="hours"></b><small data-bind="hoursOff"></small></div></li>
-          <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><small>البريد</small><a data-mail href="#"><b data-bind="email"></b></a></div></li>
+          <li data-need="hours"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>ساعات العمل</small><b data-bind="hours"></b><small data-bind="hoursOff"></small></div></li>
+          <li data-need="email"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><small>البريد</small><a data-mail href="#"><b data-bind="email"></b></a></div></li>
         </ul>
         <div class="map" id="map" hidden></div>
+        <a class="btn btn-ghost" id="mapLink" target="_blank" rel="noopener" style="margin-top:16px;width:100%" hidden>افتح الموقع في خرائط Google</a>
       </div>
     </div>
   </div>
@@ -570,6 +571,9 @@ const CONFIG = {
     tag:'<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="7.5" r="1.5"/>',
     clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
     user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/>',
+    chip:'<rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>',
+    car:'<path d="M3 15v-3l2-5h14l2 5v3z"/><circle cx="7.5" cy="15.5" r="1.8"/><circle cx="16.5" cy="15.5" r="1.8"/><path d="M5 12h14"/>',
+    pin:'<path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>',
     star:'<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>'
   };
   const svg = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[k]||ICONS.star}</svg>`;
@@ -582,7 +586,9 @@ const CONFIG = {
   // روابط التواصل
   const waMsg = encodeURIComponent(`مرحبًا ${C.name} ${C.brand}، أرغب بحجز موعد.`);
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = `https://wa.me/${C.whatsapp}?text=${waMsg}`; a.target = "_blank"; a.rel = "noopener"; });
-  document.querySelectorAll('[data-tel]').forEach(a => a.href = `tel:${C.phone.replace(/\s/g,'')}`);
+  document.querySelectorAll('[data-tel]').forEach(a => a.href = `tel:${C.phoneIntl || C.phone.replace(/\s/g,'')}`);
+  if (C.foundedYear) $('#since').hidden = false;
+  document.querySelectorAll('[data-need]').forEach(li => { if (!C[li.dataset.need]) li.hidden = true; });
   document.querySelectorAll('[data-mail]').forEach(a => a.href = `mailto:${C.email}`);
 
   // القصة والمميزات
@@ -618,10 +624,15 @@ const CONFIG = {
   }
 
   // الخريطة
-  if (C.mapEmbed) { const m = $('#map'); m.hidden = false; m.innerHTML = `<iframe src="${esc(C.mapEmbed)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="الموقع على الخريطة"></iframe>`; }
+  if (C.lat && C.lng) {
+    const q = `${C.lat},${C.lng}`, m = $('#map'), l = $('#mapLink');
+    m.hidden = false; m.innerHTML = `<iframe src="https://maps.google.com/maps?q=${q}&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع كراج AUTO على الخريطة"></iframe>`;
+    l.hidden = false; l.href = `https://www.google.com/maps?q=${q}`;
+  }
 
   // التواصل الاجتماعي
   const SOC = {
+    facebook:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.5c0-.8.2-1.5 1.5-1.5H17V2h-2.6C11.6 2 11 3.9 11 6.1V8H9v3h2v11h3V11h2.4l.6-3z"/></svg>',
     instagram:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
     tiktok:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.8 3.8 4 4v3c-1.5 0-2.9-.5-4-1.2V15a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3V3z"/></svg>',
     x:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.7 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2l7.3-8.4L1.7 3h6.4l4.4 5.9zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg>'
