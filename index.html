@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كراج AUTO | من نحن</title>
+<meta name="description" content="كراج AUTO — مركز متكامل لصيانة السيارات في الكويت: فحص كمبيوتر، ميكانيك، كهرباء، تكييف، سمكرة وصبغ، بضمان على العمل.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Cinzel:wght@600;800&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   ① الألوان والهوية — عدّل هنا لتغيير مظهر الموقع بالكامل
+   ========================================================= */
+:root{
+  --bg:        #0B0B0C;   /* الخلفية الرئيسية */
+  --bg-2:      #121214;   /* خلفية الأقسام البديلة */
+  --card:      #17171A;   /* خلفية البطاقات */
+  --line:      rgba(201,162,75,.18); /* الحدود */
+  --gold:      #C9A24B;   /* الذهبي الأساسي */
+  --gold-2:    #E8CC85;   /* الذهبي الفاتح */
+  --gold-3:    #8C6A24;   /* الذهبي الداكن */
+  --text:      #F3F0E8;   /* النص الأساسي */
+  --muted:     #A19D94;   /* النص الثانوي */
+  --radius:    14px;
+  --maxw:      1180px;
+  --metal: linear-gradient(135deg,var(--gold-3) 0%,var(--gold-2) 45%,var(--gold) 60%,var(--gold-3) 100%);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Tajawal',system-ui,sans-serif;
+  background:var(--bg);color:var(--text);
+  line-height:1.8;font-size:17px;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:20px}
+section{padding:96px 0;position:relative}
+.alt{background:var(--bg-2)}
+
+/* ---------- عناصر مشتركة ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--gold);font-weight:700;font-size:.9rem;letter-spacing:.5px;margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+h1,h2,h3{line-height:1.35;font-weight:800}
+h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px}
+.gold-text{background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1.08rem;max-width:720px}
+.center{text-align:center}.center .lead{margin-inline:auto}.center .eyebrow::after{content:"";width:34px;height:1px;background:var(--gold)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;justify-content:center;
+  padding:14px 28px;border-radius:999px;font-weight:700;font-size:1rem;
+  transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:0;font-family:inherit;
+}
+.btn-gold{background:var(--metal);color:#1a1405;box-shadow:0 10px 30px -10px rgba(201,162,75,.6)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(201,162,75,.8)}
+.btn-ghost{border:1px solid var(--line);color:var(--text);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-2)}
+.btn svg{width:20px;height:20px}
+
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:32px;transition:transform .35s,border-color .35s,box-shadow .35s;position:relative;overflow:hidden;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(201,162,75,.5);box-shadow:0 24px 50px -30px rgba(201,162,75,.45)}
+.icon{
+  width:58px;height:58px;border-radius:14px;display:grid;place-items:center;margin-bottom:20px;
+  background:rgba(201,162,75,.08);border:1px solid var(--line);color:var(--gold-2)
+}
+.icon svg{width:28px;height:28px}
+
+/* ---------- الشريط العلوي ---------- */
+.nav{
+  position:fixed;inset-inline:0;top:0;z-index:50;transition:background .3s,border-color .3s;
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{background:rgba(11,11,12,.88);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem}
+.logo .mark{
+  font-family:'Cinzel',serif;font-size:1.45rem;letter-spacing:3px;
+  background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent
+}
+.logo .sep{width:1px;height:22px;background:var(--line)}
+.menu{display:flex;gap:30px;list-style:none;font-weight:500}
+.menu a{color:var(--muted);transition:color .2s}
+.menu a:hover,.menu a.active{color:var(--gold-2)}
+.nav .btn{padding:10px 22px;font-size:.92rem}
+.burger{display:none;background:none;border:0;color:var(--text);cursor:pointer}
+.burger svg{width:28px;height:28px}
+
+/* ---------- الواجهة ---------- */
+.hero{
+  min-height:88vh;display:flex;align-items:center;padding:140px 0 90px;
+  background:
+    radial-gradient(900px 500px at 15% 20%,rgba(201,162,75,.16),transparent 60%),
+    radial-gradient(700px 400px at 90% 90%,rgba(201,162,75,.08),transparent 60%),
+    var(--bg);
+  overflow:hidden;
+}
+.hero::after{ /* خطوط زخرفية */
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:linear-gradient(rgba(201,162,75,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,75,.06) 1px,transparent 1px);
+  background-size:64px 64px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
+}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:2}
+.crumbs{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.crumbs a{color:var(--gold)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:22px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero-visual{
+  aspect-ratio:1/1;border-radius:50%;position:relative;
+  background:radial-gradient(circle at 50% 50%,rgba(201,162,75,.15),transparent 62%);
+  display:grid;place-items:center;
+}
+.hero-visual .ring{position:absolute;inset:6%;border:1px solid var(--line);border-radius:50%;animation:spin 40s linear infinite}
+.hero-visual .ring:nth-child(2){inset:18%;border-style:dashed;animation-duration:60s;animation-direction:reverse}
+.hero-visual .ring::before{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px var(--gold)}
+.hero-visual .badge{
+  text-align:center;position:relative;z-index:2;
+}
+.hero-visual .badge .big{font-family:'Cinzel',serif;font-size:clamp(3.2rem,8vw,5.6rem);letter-spacing:8px;line-height:1}
+.hero-visual .badge small{display:block;color:var(--muted);letter-spacing:4px;margin-top:10px;font-size:.85rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- قصتنا ---------- */
+.story{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}
+.story-media{
+  position:relative;border-radius:22px;aspect-ratio:4/5;overflow:hidden;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(160deg,rgba(201,162,75,.18),transparent 40%),
+    linear-gradient(0deg,#0d0d0f,#1b1b1f);
+}
+.story-media img{width:100%;height:100%;object-fit:cover}
+.story-media .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--gold);opacity:.55}
+.story-media .ph svg{width:62%}
+.since{
+  position:absolute;bottom:26px;inset-inline-start:26px;
+  background:rgba(11,11,12,.85);backdrop-filter:blur(8px);border:1px solid var(--line);
+  border-radius:14px;padding:16px 22px
+}
+.since b{display:block;font-size:2rem;line-height:1.1}
+.since span{color:var(--muted);font-size:.9rem}
+.story p{color:var(--muted);margin-bottom:16px}
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin-top:26px}
+.checks li{display:flex;gap:10px;align-items:flex-start}
+.checks li::before{content:"";flex:0 0 20px;height:20px;margin-top:5px;border-radius:50%;
+  background:var(--metal);mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>') center/14px no-repeat,linear-gradient(#000,#000);
+  -webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>') center/14px no-repeat;
+  background-color:rgba(201,162,75,.15);
+}
+
+/* ---------- الأرقام ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card)}
+.stat{padding:38px 20px;text-align:center;border-inline-start:1px solid var(--line)}
+.stat:first-child{border-inline-start:0}
+.stat b{display:block;font-size:clamp(2rem,4vw,2.9rem);line-height:1.1}
+.stat span{color:var(--muted)}
+
+/* ---------- الشبكات ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:50px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px}
+.card h3{font-size:1.25rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.98rem}
+.card .num{position:absolute;top:18px;inset-inline-end:22px;font-family:'Cinzel',serif;font-size:2.6rem;color:rgba(201,162,75,.12)}
+
+/* ---------- رؤية/رسالة ---------- */
+.vm .card{padding:40px}
+.vm .card::before{content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:3px;background:var(--metal)}
+
+/* ---------- الخطوات ---------- */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:56px;counter-reset:s;position:relative}
+.steps::before{content:"";position:absolute;top:31px;inset-inline:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.step{text-align:center;position:relative}
+.step .dot{
+  width:62px;height:62px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;
+  background:var(--bg);border:1px solid var(--gold);font-family:'Cinzel',serif;font-size:1.2rem;color:var(--gold-2);position:relative;z-index:1
+}
+.step h3{font-size:1.08rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.92rem}
+
+/* ---------- الماركات ---------- */
+.brands{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:40px}
+.brands span{padding:10px 22px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-weight:500;transition:.25s}
+.brands span:hover{color:var(--gold-2);border-color:var(--gold)}
+
+/* ---------- آراء ---------- */
+.quote p{color:var(--text);font-size:1.02rem;margin-bottom:20px}
+.quote .who{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.92rem}
+.quote .who b{color:var(--text);display:block}
+.stars{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--metal);display:grid;place-items:center;color:#1a1405;font-weight:800}
+
+/* ---------- الحجز والتواصل ---------- */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.form{display:grid;gap:14px}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label{font-size:.9rem;color:var(--muted);display:block;margin-bottom:6px}
+.form input,.form select,.form textarea{
+  width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;
+  padding:13px 14px;color:var(--text);font-family:inherit;font-size:1rem;transition:border-color .2s
+}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--gold)}
+.form textarea{min-height:96px;resize:vertical}
+.info-list{list-style:none;display:grid;gap:18px;margin:10px 0 24px}
+.info-list li{display:flex;gap:16px;align-items:flex-start}
+.info-list .icon{margin:0;flex:0 0 48px;width:48px;height:48px}
+.info-list .icon svg{width:22px;height:22px}
+.info-list small{color:var(--muted);display:block}
+.info-list b{font-weight:700}
+.map{border-radius:12px;overflow:hidden;border:1px solid var(--line);height:220px;background:var(--bg)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
+
+/* ---------- التذييل ---------- */
+footer{border-top:1px solid var(--line);padding:46px 0 30px;background:var(--bg)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer p{color:var(--muted);font-size:.9rem}
+.socials{display:flex;gap:10px}
+.socials a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);transition:.25s}
+.socials a:hover{color:var(--gold-2);border-color:var(--gold)}
+.socials svg{width:18px;height:18px}
+
+/* ---------- زر واتساب الثابت ---------- */
+.wa-float{
+  position:fixed;bottom:22px;inset-inline-start:22px;z-index:60;width:58px;height:58px;border-radius:50%;
+  background:#25D366;display:grid;place-items:center;color:#fff;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);
+  transition:transform .25s
+}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px}
+
+/* ---------- حركة الظهور ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-visual .ring{animation:none}}
+
+/* ---------- التجاوب ---------- */
+@media (max-width:1000px){
+  .hero .wrap,.story,.contact{grid-template-columns:1fr}
+  .hero-visual{max-width:380px;margin-inline:auto;width:100%}
+  .grid-3{grid-template-columns:1fr 1fr}
+  .grid-4{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr 1fr}
+  .steps::before{display:none}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  section{padding:70px 0}
+  .wrap{padding-inline:16px}
+  .menu{
+    position:fixed;top:78px;inset-inline:0;flex-direction:column;gap:0;
+    background:rgba(11,11,12,.97);border-bottom:1px solid var(--line);
+    max-height:0;overflow:hidden;transition:max-height .35s
+  }
+  .menu.open{max-height:420px}
+  .menu li a{display:block;padding:16px 20px;border-top:1px solid var(--line)}
+  .burger{display:block}
+  .nav .btn{display:none}
+  .grid-2,.grid-3,.grid-4,.checks,.form .row{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-inline-start:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr}
+  .card{padding:26px}
+}
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     ② بيانات الموقع — كل النصوص والأرقام هنا. عدّل القيم فقط.
+     القيم بين [ ] مؤقتة ويجب استبدالها بالبيانات الحقيقية.
+     ========================================================= -->
+<script>
+const CONFIG = {
+  name:      "كراج",
+  brand:     "AUTO",
+  tagline:   "عناية تليق بسيارتك",
+
+  // التواصل
+  phone:     "+965 0000 0000",       // [رقم الهاتف]
+  whatsapp:  "96500000000",          // [رقم واتساب بدون + أو مسافات]
+  email:     "info@example.com",     // [البريد الإلكتروني]
+  address:   "الكويت – الشويخ الصناعية، قطعة ـ ، شارع ـ", // [العنوان]
+  hours:     "السبت – الخميس: 8:00 ص – 10:00 م",
+  hoursOff:  "الجمعة: مغلق",
+  mapEmbed:  "",                     // [رابط تضمين خرائط جوجل — اتركه فارغًا لإخفاء الخريطة]
+  instagram: "",                     // [رابط إنستغرام — فارغ = مخفي]
+  tiktok:    "",
+  x:         "",
+
+  // من نحن
+  foundedYear: 2015,                 // [سنة التأسيس]
+  story: [
+    "بدأ كراج AUTO بفكرة واضحة: أن يحصل صاحب السيارة في الكويت على خدمة بمستوى الوكالة، بشفافية في السعر وسرعة في التسليم، دون تعقيد أو مفاجآت في الفاتورة.",
+    "اليوم نعمل بفريق من الفنيين المتخصصين وأجهزة تشخيص حديثة تغطي أغلب الماركات الأوروبية والآسيوية والأمريكية، ونلتزم بإبلاغ العميل بالتشخيص والتكلفة قبل البدء بأي عمل."
+  ],
+  highlights: [
+    "أجهزة فحص كمبيوتر حديثة",
+    "قطع غيار أصلية وبديلة معتمدة",
+    "عرض سعر مكتوب قبل البدء",
+    "ضمان على العمل وقطع الغيار",
+    "تحديث العميل بالصور أثناء الإصلاح",
+    "التزام بموعد التسليم"
+  ],
+
+  // الأرقام — اتركها صفرًا لإخفاء الشريط بالكامل
+  stats: [
+    { value: 10,    suffix: "+", label: "سنوات خبرة" },
+    { value: 15000, suffix: "+", label: "سيارة تمت خدمتها" },
+    { value: 25,    suffix: "",  label: "فنيًا متخصصًا" },
+    { value: 6,     suffix: " أشهر", label: "ضمان على العمل" }
+  ],
+
+  vision:  "أن نكون الخيار الأول لأصحاب السيارات في الكويت لكل ما يخص الصيانة والإصلاح، بمعايير خدمة تضاهي الوكالات.",
+  mission: "تقديم صيانة دقيقة وشفافة بأيدي فنيين مؤهلين، باستخدام أحدث أدوات التشخيص، مع احترام وقت العميل وميزانيته.",
+  values: [
+    { t: "الشفافية", d: "تشخيص واضح وسعر معلن قبل أي عمل." },
+    { t: "الإتقان",  d: "نعمل وفق مواصفات الشركة المصنّعة." },
+    { t: "الالتزام", d: "موعد التسليم وعد لا يُخلف." },
+    { t: "الأمان",   d: "سلامتك على الطريق أولويتنا." }
+  ],
+
+  services: [
+    { icon: "scan",   t: "فحص كمبيوتر شامل", d: "تشخيص دقيق للأعطال بأجهزة معتمدة مع تقرير مفصّل." },
+    { icon: "engine", t: "ميكانيك عام",      d: "محركات، جير، عفشة، فرامل، وصيانة شاملة لجميع الأنظمة." },
+    { icon: "bolt",   t: "كهرباء السيارات",  d: "بطاريات، دينامو، سلف، وأنظمة الإضاءة والحساسات." },
+    { icon: "snow",   t: "تكييف وتبريد",     d: "تعبئة فريون، كشف تسريب، وصيانة كمبروسر وراديتر." },
+    { icon: "oil",    t: "صيانة دورية وزيوت", d: "تغيير زيوت وفلاتر وفق جدول الشركة المصنّعة." },
+    { icon: "paint",  t: "سمكرة وصبغ",       d: "إصلاح الصدمات والصبغ بغرفة مجهزة ومطابقة اللون." }
+  ],
+
+  why: [
+    { icon: "shield", t: "ضمان مكتوب",       d: "ضمان على العمل وقطع الغيار المركّبة." },
+    { icon: "tag",    t: "سعر قبل البدء",    d: "لا نبدأ بأي إصلاح قبل موافقتك على التكلفة." },
+    { icon: "clock",  t: "تسليم بالموعد",    d: "نحدد وقت التسليم مسبقًا ونلتزم به." },
+    { icon: "user",   t: "فنيون معتمدون",    d: "فريق مدرّب ومتخصص حسب نوع السيارة." }
+  ],
+
+  steps: [
+    { t: "الحجز",      d: "عبر واتساب أو الاتصال" },
+    { t: "الفحص",      d: "تشخيص كمبيوتر وفحص فني" },
+    { t: "عرض السعر",  d: "تكلفة واضحة لموافقتك" },
+    { t: "الإصلاح",    d: "تنفيذ مع تحديثات مصوّرة" },
+    { t: "التسليم",    d: "اختبار قيادة وضمان" }
+  ],
+
+  brands: ["تويوتا","لكزس","نيسان","هوندا","هيونداي","كيا","مرسيدس","بي إم دبليو","أودي","فولكسفاغن","لاند روفر","شيفروليه","جي إم سي","فورد","جيب"],
+
+  // الآراء — احذف العناصر أو اترك القائمة فارغة [] لإخفاء القسم. لا تضع تقييمات غير حقيقية.
+  testimonials: []
+};
+</script>
+
+<!-- ===================== الشريط العلوي ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="الصفحة الرئيسية">
+      <span data-bind="name"></span><span class="sep"></span><span class="mark" data-bind="brand"></span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="#about" class="active">من نحن</a></li>
+      <li><a href="#vision">رؤيتنا</a></li>
+      <li><a href="#services">خدماتنا</a></li>
+      <li><a href="#why">لماذا نحن</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-gold">احجز موعدك</a>
+    <button class="burger" id="burger" aria-label="القائمة">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== الواجهة ===================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="crumbs"><a href="#top">الرئيسية</a> / من نحن</div>
+      <span class="eyebrow">من نحن</span>
+      <h1>خبرة تُتقن التفاصيل،<br><span class="gold-text" data-bind="tagline"></span></h1>
+      <p class="lead">مركز متكامل لصيانة وإصلاح السيارات في الكويت، يجمع بين الخبرة الفنية وأحدث أجهزة التشخيص وخدمة عملاء بمستوى راقٍ.</p>
+      <div class="actions">
+        <a class="btn btn-gold" data-wa href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+          احجز عبر واتساب
+        </a>
+        <a class="btn btn-ghost" data-tel href="#">اتصل بنا</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="ring"></div><div class="ring"></div>
+      <div class="badge"><div class="big gold-text" data-bind="brand"></div><small>CAR CARE · KUWAIT</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== قصتنا ===================== -->
+<section id="about" class="alt">
+  <div class="wrap story">
+    <div class="story-media reveal">
+      <!-- لإضافة صورة حقيقية: ضع <img src="garage.jpg" alt="ورشة كراج AUTO"> مكان العنصر .ph -->
+      <div class="ph">
+        <svg viewBox="0 0 200 90" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 62h12c0-9 7-16 16-16s16 7 16 16h82c0-9 7-16 16-16s16 7 16 16h6V48l-14-6-26-20H64L40 40 14 44l-4 6z"/><circle cx="38" cy="62" r="10"/><circle cx="152" cy="62" r="10"/><path d="M70 26h40v16H54zM116 26h20l18 16h-38z"/></svg>
+      </div>
+      <div class="since"><b class="gold-text" data-bind="foundedYear"></b><span>عام التأسيس</span></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">قصتنا</span>
+      <h2>أكثر من ورشة… <span class="gold-text">شريكك في العناية بسيارتك</span></h2>
+      <div id="story"></div>
+      <ul class="checks" id="highlights"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== الأرقام ===================== -->
+<section id="statsSec" style="padding:0">
+  <div class="wrap" style="transform:translateY(-50%)">
+    <div class="stats reveal" id="stats"></div>
+  </div>
+</section>
+
+<!-- ===================== الرؤية والرسالة والقيم ===================== -->
+<section id="vision" style="padding-top:20px">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">رؤيتنا ورسالتنا</span>
+      <h2>ما الذي <span class="gold-text">يحرّكنا</span></h2>
+    </div>
+    <div class="grid-2 vm">
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>رؤيتنا</h3><p data-bind="vision"></p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
+        <h3>رسالتنا</h3><p data-bind="mission"></p>
+      </div>
+    </div>
+    <div class="grid-4" id="values"></div>
+  </div>
+</section>
+
+<!-- ===================== الخدمات ===================== -->
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">خدماتنا</span>
+      <h2>خدمات متكاملة <span class="gold-text">تحت سقف واحد</span></h2>
+      <p class="lead">من الفحص الأولي حتى التسليم، نغطي كل ما تحتاجه سيارتك بمعايير احترافية.</p>
+    </div>
+    <div class="grid-3" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ===================== لماذا نحن ===================== -->
+<section id="why">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">لماذا نحن</span>
+      <h2>ثقة تُبنى <span class="gold-text">بالتفاصيل</span></h2>
+    </div>
+    <div class="grid-4" id="why-grid"></div>
+
+    <div class="center reveal" style="margin-top:96px">
+      <span class="eyebrow">آلية العمل</span>
+      <h2>رحلة سيارتك <span class="gold-text">معنا</span></h2>
+    </div>
+    <div class="steps" id="steps"></div>
+  </div>
+</section>
+
+<!-- ===================== الماركات ===================== -->
+<section class="alt" id="brandsSec">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">الماركات</span>
+      <h2>نخدم <span class="gold-text">أغلب الماركات</span></h2>
+    </div>
+    <div class="brands reveal" id="brands"></div>
+  </div>
+</section>
+
+<!-- ===================== آراء العملاء (يظهر فقط عند وجود تقييمات) ===================== -->
+<section id="reviewsSec" hidden>
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">آراء عملائنا</span>
+      <h2>ماذا يقولون <span class="gold-text">عنا</span></h2>
+    </div>
+    <div class="grid-3" id="reviews"></div>
+  </div>
+</section>
+
+<!-- ===================== الحجز والتواصل ===================== -->
+<section id="contact" class="alt">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">تواصل معنا</span>
+      <h2>احجز موعدك <span class="gold-text">الآن</span></h2>
+      <p class="lead">املأ البيانات وسيتم تحويلك إلى واتساب برسالة جاهزة.</p>
+    </div>
+    <div class="contact" style="margin-top:50px">
+      <form class="card form reveal" id="bookForm">
+        <div class="row">
+          <div><label for="f-name">الاسم</label><input id="f-name" required placeholder="الاسم الكامل"></div>
+          <div><label for="f-phone">رقم الهاتف</label><input id="f-phone" type="tel" required placeholder="xxxx xxxx" inputmode="tel"></div>
+        </div>
+        <div class="row">
+          <div><label for="f-car">نوع السيارة وموديلها</label><input id="f-car" required placeholder="مثال: لكزس ES 2021"></div>
+          <div><label for="f-service">الخدمة المطلوبة</label><select id="f-service"></select></div>
+        </div>
+        <div><label for="f-date">الموعد المفضّل</label><input id="f-date" type="date"></div>
+        <div><label for="f-notes">وصف المشكلة</label><textarea id="f-notes" placeholder="اختياري"></textarea></div>
+        <button class="btn btn-gold" type="submit">إرسال الطلب عبر واتساب</button>
+      </form>
+
+      <div class="card reveal">
+        <h3 style="margin-bottom:8px">معلومات التواصل</h3>
+        <ul class="info-list">
+          <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>العنوان</small><b data-bind="address"></b></div></li>
+          <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span><div><small>الهاتف</small><a data-tel href="#"><b data-bind="phone" dir="ltr"></b></a></div></li>
+          <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>ساعات العمل</small><b data-bind="hours"></b><small data-bind="hoursOff"></small></div></li>
+          <li><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><small>البريد</small><a data-mail href="#"><b data-bind="email"></b></a></div></li>
+        </ul>
+        <div class="map" id="map" hidden></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== التذييل ===================== -->
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo"><span data-bind="name"></span><span class="sep"></span><span class="mark" data-bind="brand"></span></a>
+    <p>© <span id="year"></span> <span data-bind="name"></span> <span data-bind="brand"></span>. جميع الحقوق محفوظة.</p>
+    <div class="socials" id="socials"></div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa href="#" aria-label="واتساب">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<!-- =========================================================
+     ③ منطق العرض — لا حاجة لتعديله
+     ========================================================= -->
+<script>
+(function(){
+  const C = CONFIG, $ = s => document.querySelector(s);
+  const esc = s => String(s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+
+  const ICONS = {
+    scan:'<path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M7 12h10"/>',
+    engine:'<path d="M4 10h2V8h3V6h6v2h2l2 3h1v5h-1l-2 3H9l-2-2H6v-2H4z"/><path d="M11 6V4h3"/>',
+    bolt:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
+    snow:'<path d="M12 2v20M4.9 6l14.2 12M19.1 6 4.9 18M9 4l3 2 3-2M9 20l3-2 3 2"/>',
+    oil:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+    paint:'<path d="M4 4h12v5H4z"/><path d="M16 6h3v5h-8v3"/><path d="M10 14h2v7h-2z"/>',
+    shield:'<path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/>',
+    tag:'<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="7.5" r="1.5"/>',
+    clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/>',
+    star:'<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>'
+  };
+  const svg = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[k]||ICONS.star}</svg>`;
+
+  // ربط النصوص البسيطة
+  document.querySelectorAll('[data-bind]').forEach(el => { const v = C[el.dataset.bind]; if (v !== undefined) el.textContent = v; });
+  document.title = `${C.name} ${C.brand} | من نحن`;
+  $('#year').textContent = new Date().getFullYear();
+
+  // روابط التواصل
+  const waMsg = encodeURIComponent(`مرحبًا ${C.name} ${C.brand}، أرغب بحجز موعد.`);
+  document.querySelectorAll('[data-wa]').forEach(a => { a.href = `https://wa.me/${C.whatsapp}?text=${waMsg}`; a.target = "_blank"; a.rel = "noopener"; });
+  document.querySelectorAll('[data-tel]').forEach(a => a.href = `tel:${C.phone.replace(/\s/g,'')}`);
+  document.querySelectorAll('[data-mail]').forEach(a => a.href = `mailto:${C.email}`);
+
+  // القصة والمميزات
+  $('#story').innerHTML = C.story.map(p => `<p>${esc(p)}</p>`).join('');
+  $('#highlights').innerHTML = C.highlights.map(h => `<li>${esc(h)}</li>`).join('');
+
+  // الأرقام
+  const stats = C.stats.filter(s => s.value);
+  if (!stats.length) $('#statsSec').hidden = true;
+  $('#stats').innerHTML = stats.map(s => `<div class="stat"><b class="gold-text" data-count="${s.value}" data-suffix="${esc(s.suffix)}">0</b><span>${esc(s.label)}</span></div>`).join('');
+
+  // القيم
+  $('#values').innerHTML = C.values.map((v,i) => `<div class="card reveal"><span class="num">0${i+1}</span><h3>${esc(v.t)}</h3><p>${esc(v.d)}</p></div>`).join('');
+
+  // الخدمات
+  $('#services-grid').innerHTML = C.services.map(s => `<div class="card reveal"><div class="icon">${svg(s.icon)}</div><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></div>`).join('');
+  $('#f-service').innerHTML = C.services.map(s => `<option>${esc(s.t)}</option>`).join('') + '<option>أخرى</option>';
+
+  // لماذا نحن
+  $('#why-grid').innerHTML = C.why.map(w => `<div class="card reveal"><div class="icon">${svg(w.icon)}</div><h3>${esc(w.t)}</h3><p>${esc(w.d)}</p></div>`).join('');
+
+  // الخطوات
+  $('#steps').innerHTML = C.steps.map((s,i) => `<div class="step reveal"><div class="dot">${i+1}</div><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></div>`).join('');
+
+  // الماركات
+  if (!C.brands.length) $('#brandsSec').hidden = true;
+  $('#brands').innerHTML = C.brands.map(b => `<span>${esc(b)}</span>`).join('');
+
+  // الآراء
+  if (C.testimonials.length) {
+    $('#reviewsSec').hidden = false;
+    $('#reviews').innerHTML = C.testimonials.map(t => `<div class="card quote reveal"><div class="stars">${'★'.repeat(t.stars||5)}</div><p>${esc(t.text)}</p><div class="who"><span class="avatar">${esc(t.name[0])}</span><div><b>${esc(t.name)}</b>${esc(t.car||'')}</div></div></div>`).join('');
+  }
+
+  // الخريطة
+  if (C.mapEmbed) { const m = $('#map'); m.hidden = false; m.innerHTML = `<iframe src="${esc(C.mapEmbed)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="الموقع على الخريطة"></iframe>`; }
+
+  // التواصل الاجتماعي
+  const SOC = {
+    instagram:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+    tiktok:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.8 3.8 4 4v3c-1.5 0-2.9-.5-4-1.2V15a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3V3z"/></svg>',
+    x:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.7 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2l7.3-8.4L1.7 3h6.4l4.4 5.9zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg>'
+  };
+  $('#socials').innerHTML = Object.keys(SOC).filter(k => C[k]).map(k => `<a href="${esc(C[k])}" target="_blank" rel="noopener" aria-label="${k}">${SOC[k]}</a>`).join('');
+
+  // نموذج الحجز ← واتساب
+  $('#bookForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const v = id => $('#'+id).value.trim();
+    const msg = [`طلب حجز موعد — ${C.name} ${C.brand}`, `الاسم: ${v('f-name')}`, `الهاتف: ${v('f-phone')}`, `السيارة: ${v('f-car')}`, `الخدمة: ${v('f-service')}`, v('f-date') && `الموعد المفضل: ${v('f-date')}`, v('f-notes') && `الملاحظات: ${v('f-notes')}`].filter(Boolean).join('\n');
+    window.open(`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+  });
+
+  // القائمة على الجوال
+  $('#burger').addEventListener('click', () => $('#menu').classList.toggle('open'));
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => $('#menu').classList.remove('open')));
+
+  // الشريط عند التمرير
+  const nav = $('#nav'); const onScroll = () => nav.classList.toggle('scrolled', scrollY > 30);
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // حركة الظهور + عدّاد الأرقام
+  const count = el => {
+    const end = +el.dataset.count, suf = el.dataset.suffix, t0 = performance.now(), dur = 1600;
+    const tick = t => { const p = Math.min((t - t0) / dur, 1), val = Math.floor(end * (1 - Math.pow(1 - p, 3)));
+      el.textContent = val.toLocaleString('ar-KW') + suf; if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  };
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    en.target.classList.add('in');
+    en.target.querySelectorAll('[data-count]').forEach(count);
+    io.unobserve(en.target);
+  }), {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
